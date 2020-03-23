@@ -8,8 +8,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "usuario")
-public class Usuario {
+@Table(name = "administrador")
+public class Administrador {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,6 +27,17 @@ public class Usuario {
 	
 	@Column(name = "token")
 	private String token;
+	
+	@Column(name = "salario")
+	private double salario;
+
+	public double getSalario() {
+		return salario;
+	}
+
+	public void setSalario(double salario) {
+		this.salario = salario;
+	}
 
 	public int getId() {
 		return id;
@@ -70,4 +81,3 @@ public class Usuario {
 
 	
 }
-
